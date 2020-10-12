@@ -1,0 +1,125 @@
+html {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../../sources/files/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/************** nav *************/
+
+nav span {
+    font-size: larger;
+}
+
+nav .navbar-nav a {
+    margin-left: 5px;
+    margin-top: 0;
+    transform: scale(1);
+}
+
+@media screen and (max-width: 992px) {
+    nav .navbar-nav a {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+/************* main *************/
+
+main {
+    margin: 50px 0 200px 0;
+}
+
+main .link {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+main .link:hover {
+    transform: scale(1.15);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.production {
+    text-align: center;
+    max-width: 227px;
+    margin: 25px 25px 25px 25px;
+}
+
+.production img {
+    width: 227px;
+    max-height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1);
+    transform-origin: 50% bottom;
+    transition: transform 250ms;
+}
+
+.production img:hover {
+    transform: scale(1.25);
+}
+
+.workTitle {
+    margin-top: 10px;
+}
+
+.bigtext {
+    font-weight: bold;
+}
+
+.smaller {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 992px) {
+    .profile {
+        flex-direction: column;
+    }
+    .profile h2 {
+        margin-top: 10px;
+    }
+    #carouselSlide, .todisappear {
+        display: none;
+    }
+}
+
+/************ footer ************/
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    color: #FFFFFF;
+}
+
+.btn.rounded-circle {
+    height: 50px;
+    width: 50px;
+    margin: 20px 20px 0px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+.btn.rounded-circle:hover {
+    transform: scale(1.25);
+}
