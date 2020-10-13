@@ -1,3 +1,3 @@
-MyWebSite
-
-This is the of my web site.
+# MyWebSite
+#
+# This is the code of my web site.
