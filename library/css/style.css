@@ -10,6 +10,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
 }
 
 /************************* nav *************************/
@@ -39,10 +40,13 @@ main {
 
 /******* home page *******/
 
+svg {
+    height: 60vh;
+}
+
 #home {
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 10vh;
     height: 100vh;
 }
 
