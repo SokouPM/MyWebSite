@@ -20,7 +20,7 @@ class controllerNavigation
                 break;
 
             case 'web':
-                include_once 'View/web.phtml';     // Go to page "view/mycareer.phtml"
+                include_once 'View/web.phtml';     // Go to page "view/web.phtml"
                 break;
 
             default:
