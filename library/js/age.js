@@ -12,10 +12,10 @@ var ageLocation;
 
 function getAge(birthDate) {
 
-    let diff = Date.now() - birthDate.getTime();
-    ageLocation = document.getElementById('myAge');
+    ageLocation = document.getElementById('myAge');     // To get the location of my age
 
-    let age = new Date(diff);
+    let diff = Date.now() - birthDate.getTime();        // Calculate my age with my date of birth and today's
+    let age = new Date(diff);   
 
     return Math.abs(age.getUTCFullYear() - 1970);
 }
@@ -25,6 +25,6 @@ function getAge(birthDate) {
 // /*********************************************************************************/
 
 window.addEventListener('DOMContentLoaded', function () {
-    window.onload = currentAge = getAge(new Date(1993, 4, 28));
-    window.onload = ageLocation.innerHTML = currentAge + " ans";
+    window.onload = currentAge = getAge(new Date(1993, 3, 28));     // run getAge with my date of birth
+    window.onload = ageLocation.innerHTML = currentAge + " ans";    // Write my age on location
 });

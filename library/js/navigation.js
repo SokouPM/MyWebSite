@@ -17,9 +17,9 @@ function getUrl() {
     return url;     //return the url after treatments
 }
 
-function linkActive(url) {
+function linkActive(url) {      // To change nav link selected
 
-    let link = document.getElementsByClassName('nav-link');
+    let link = document.getElementsByClassName('nav-link');     // To get the location nav link
 
     switch (url) {
         case 'mycareer':
@@ -48,9 +48,9 @@ function linkActive(url) {
     }
 }
 
-function navigationTitle(url) {
+function navigationTitle(url) {     // To change title of page
 
-    let currentTitle = document.getElementsByTagName('title')[0];
+    let currentTitle = document.getElementsByTagName('title')[0];     // To get the location nav link
 
     switch (url) {
         case 'whoami':
@@ -79,7 +79,7 @@ function navigationTitle(url) {
 /*********************************************************************************/
 
 window.addEventListener('DOMContentLoaded', function () {
-    window.onload = currentPage = getUrl();
-    window.onload = linkActive(currentPage);
-    window.onload = navigationTitle(currentPage);
+    window.onload = currentPage = getUrl();         // run getUrl and assign the result in "currentPage"
+    window.onload = linkActive(currentPage);        // run linkActive
+    window.onload = navigationTitle(currentPage);   // run navigationTitle
 });
