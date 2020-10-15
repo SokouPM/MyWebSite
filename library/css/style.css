@@ -12,7 +12,7 @@ body {
     background-attachment: fixed;
 }
 
-/************** nav *************/
+/************************* nav *************************/
 
 nav span {
     font-size: larger;
@@ -31,11 +31,42 @@ nav .navbar-nav a {
     }
 }
 
-/************* main *************/
+/************************* main ************************/
 
 main {
     margin: 50px 0 200px 0;
 }
+
+/******* home page *******/
+
+#home {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 10vh;
+    height: 100vh;
+}
+
+#welcomeTitle {
+    color: black;
+    font-size: 10vh;
+}
+
+#clickToGo {
+    color: black;
+    margin-top: -15px;
+    font-size: 4vh;
+}
+
+#goOnSite {
+    animation: fadeIn 0.5s linear;
+    animation-fill-mode: both;
+}
+
+#goOnSite:hover {
+    text-decoration: none;
+}
+
+/***** Who am I page *****/
 
 #profilePicture {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -60,6 +91,8 @@ main .link:hover {
     text-align: center;
     justify-content: center;
 }
+
+/****** Works pages ******/
 
 .production {
     text-align: center;
@@ -104,7 +137,7 @@ main .link:hover {
     }
 }
 
-/************ footer ************/
+/************************ footer ***********************/
 
 .footer {
     position: absolute;

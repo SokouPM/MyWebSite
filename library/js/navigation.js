@@ -12,7 +12,7 @@ var currentPage;
 
 function getUrl() {
     let url = document.location.href;       // Get the url of the current page
-    url = url.substring(url.lastIndexOf("?") + 1);       // Get the word of the url after ?
+    url = url.substring(url.lastIndexOf("/") + 1);       // Get the word of the url after ?
 
     return url;     //return the url after treatments
 }
@@ -22,28 +22,35 @@ function linkActive(url) {      // To change nav link selected
     let link = document.getElementsByClassName('nav-link');     // To get the location nav link
 
     switch (url) {
-        case 'mycareer':
+        case 'whoami':
             link[0].classList.add("active");
             link[1].classList.remove("active");
             link[2].classList.remove("active");
+            link[3].classList.remove("active");
+            break;
+
+        case 'mycareer':
+            link[0].classList.remove("active");
+            link[1].classList.add("active");
+            link[2].classList.remove("active");
+            link[3].classList.remove("active");
             break;
 
         case 'infographics':
             link[0].classList.remove("active");
-            link[1].classList.add("active");
-            link[2].classList.remove("active");
+            link[1].classList.remove("active");
+            link[2].classList.add("active");
+            link[3].classList.remove("active");
             break;
 
         case 'web':
             link[0].classList.remove("active");
             link[1].classList.remove("active");
-            link[2].classList.add("active");
+            link[2].classList.remove("active");
+            link[3].classList.add("active");
             break;
 
         default:
-            link[0].classList.remove("active");
-            link[1].classList.remove("active");
-            link[2].classList.remove("active");
             break;
     }
 }
@@ -53,6 +60,10 @@ function navigationTitle(url) {     // To change title of page
     let currentTitle = document.getElementsByTagName('title')[0];     // To get the location nav link
 
     switch (url) {
+        case 'home':
+            currentTitle.innerHTML = "Pierre Marquet - Portfolio";
+            break;
+
         case 'whoami':
             currentTitle.innerHTML = "Pierre Marquet - Qui suis-je";
             break;

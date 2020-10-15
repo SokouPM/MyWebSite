@@ -7,6 +7,10 @@ class controllerNavigation
         /**** the condition "switch" will allow us to navigate between pages and make treatments through URLs ****/
 
         switch (key($_GET)) {   // If in the url there is :
+            case 'home':
+                include_once 'View/home.phtml';       // Go to page "view/whoami.phtml"
+                break;
+
             case 'whoami':
                 include_once 'View/whoami.phtml';       // Go to page "view/whoami.phtml"
                 break;
@@ -24,7 +28,7 @@ class controllerNavigation
                 break;
 
             default:
-                header('location: index.php?whoami');     // Go to page "view/whoami.phtml"
+                header('location: home');     // Go to page "view/whoami.phtml"
                 break;
         }
     }
