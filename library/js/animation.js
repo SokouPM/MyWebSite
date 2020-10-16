@@ -1,10 +1,8 @@
-var hat = document.getElementById('hat');
-var pm = document.getElementById('pm');
-var textWrapper = document.getElementById('welcomeTitle');
-var textWrapper2 = document.getElementById('clickToGo');
+var textWrapper = document.getElementById('welcomeTitle');      // Get the location of the text "Bienvenue"
+var textWrapper2 = document.getElementById('clickToGo');        // Get the location of the text "Cliquez pour entrer"
 
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");       // Add <span> between all letters
+textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");     // Add <span> between all letters
 
 anime.timeline({ loop: false })
     .add({
