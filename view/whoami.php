@@ -2,28 +2,28 @@
 <html lang="fr">
 
 <head>
-    <?php include_once './view/include/head.html' ?>
-    <script src="../library/js/age.js"></script>
+    <?php include_once('view/include/head.html'); ?>
+    <script src="./library/js/age.js"></script>
+    <title>Présentation - Pierre Marquet</title>
 </head>
 
 <body>
 
-    <?php include_once './view/include/nav.html' ?>
+    <?php include_once('view/include/nav.html'); ?>
 
     <main class="container">
-        <h1 class="mb-5 text-center">Qui suis-je ?</h1>
         <div class="profile">
-            <img class="rounded-circle" id="profilePicture" src="../sources/files/profile.jpg" alt="Moi" width="200" height="200">
+            <img class="rounded-circle" id="profilePicture" src="./sources/files/profile.jpg" alt="Photo de profil" width="200" height="200">
             <div class="ml-5 mr-5">
-                <h2>Pierre Marquet</h2>
-                <h4 id="myAge">Mon Age</h4>
-                <h6>Infographiste / Développeur Web</h6>
+                <h1 id="name">Pierre Marquet</h1>
+                <h2 id="job">Infographiste / Développeur Web</h2>
+                <h3><i class="fa fa-map-marker"></i> Paris</h3>
             </div>
-            <img src="../sources/files/logoBl.png" alt="Mon logo" class="todisappear" id="logo" height="200">
+            <img src="./sources/files/logoBl.png" alt="Mon logo" class="todisappear" id="logo" height="200">
         </div>
         <div class="mt-3">
-            <p class="text-justify">
-                Issu du monde de l'infographie, j'ai travaillé pendant 5 ans pour la Gendarmerie Nationale afin de mettre en forme des parcours d'enseignements grâce à de l'image et de l'animation. Je souhaite maintenant approfondir mes connaissances dans le domaine du développement web afin de devenir plus polyvalent.
+            <p id="presentation" class="text-justify text-dark">
+                Issu du monde de l'<strong>infographie</strong>, j'ai travaillé pendant 5 ans pour la <strong>Gendarmerie Nationale</strong> afin de mettre en forme des parcours d'enseignements à travers l'image et l'animation. je me suis ensuite formé au métier de <strong>développeur web</strong> pour travailler dans un domaine qui me passionne et devenir plus polyvalent.
             </p>
         </div>
         <div class="d-flex flex-wrap justify-content-center">
@@ -31,7 +31,7 @@
             <a href="https://github.com/SokouPM" onclick="window.open(this.href); return false;" class="link btn btn-secondary btn-lg "><i class="fa fa-github"> | Voir mon github</i></a>
             <a href="mailto:marquet_pierre@yahoo.fr" class="link btn btn-danger btn-lg"><i class="fa fa-envelope">
                     | Contactez-moi</i></a>
-            <a href="../sources/files/CV_PierreMarquet.pdf" onclick="window.open(this.href); return false;" class="link btn btn-success btn-lg"><i class="fa fa-file"> | Téléchargez mon CV</i></a>
+            <a href="./sources/files/CV_PierreMarquet.pdf" onclick="window.open(this.href); return false;" class="link btn btn-success btn-lg"><i class="fa fa-file"> | Téléchargez mon CV</i></a>
         </div>
 
         <!-- carousel -->
@@ -45,16 +45,16 @@
             <!-- carousel pictures -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../sources/carousel/1.png" alt="Missing pic :/" width="100%" height="600">
+                    <img src="./sources/carousel/1.png" alt="Réalisation" width="100%" height="600">
                 </div>
                 <div class="carousel-item">
-                    <img src="../sources/carousel/2.png" alt="Missing pic :/" width="100%" height="600">
+                    <img src="./sources/carousel/2.png" alt="Réalisation" width="100%" height="600">
                 </div>
                 <div class="carousel-item">
-                    <img src="../sources/carousel/3.png" alt="Missing pic :/" width="100%" height="600">
+                    <img src="./sources/carousel/3.png" alt="Réalisation" width="100%" height="600">
                 </div>
                 <div class="carousel-item">
-                    <img src="../sources/carousel/4.png" alt="Missing pic :/" width="100%" height="600">
+                    <img src="./sources/carousel/4.png" alt="Réalisation" width="100%" height="600">
                 </div>
             </div>
             <!-- carousel controls -->
@@ -68,7 +68,7 @@
 
     </main>
 
-    <?php include_once './view/include/footer.html' ?>
+    <?php include_once('view/include/footer.html'); ?>
 
 </body>
 

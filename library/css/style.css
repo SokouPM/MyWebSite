@@ -70,10 +70,29 @@ svg {
     text-decoration: none;
 }
 
+@media screen and (max-width: 992px) {
+    #welcomeTitle {
+        font-size: 60px;
+    }
+}
+
 /***** Who am I page *****/
 
 #profilePicture {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#name {
+    font-weight: bolder;
+}
+
+#job {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#myAge {
+    font-size: 20px;
 }
 
 main .link {
@@ -94,6 +113,12 @@ main .link:hover {
     align-items: center;
     text-align: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+    #job {
+        font-size: 18px;
+    }
 }
 
 /****** Works pages ******/
