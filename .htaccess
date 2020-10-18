@@ -1,6 +1,0 @@
-RewriteEngine on
-RewriteRule index.php/home index.php?home
-RewriteRule index.php/whoami index.php?whoami
-RewriteRule index.php/mycareer index.php?mycareer
-RewriteRule index.php/infographics index.php?infographics
-RewriteRule index.php/web index.php?web
