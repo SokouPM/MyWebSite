@@ -1,8 +1,18 @@
+'use strict'
+
+/*********************************************************************************/
+/*********************************** VARIABLES ***********************************/
+/*********************************************************************************/
+
 var textWrapper = document.getElementById('welcomeTitle');      // Get the location of the text "Bienvenue"
 var textWrapper2 = document.getElementById('clickToGo');        // Get the location of the text "Cliquez pour entrer"
 
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");       // Add <span> between all letters
 textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");     // Add <span> between all letters
+
+/*********************************************************************************/
+/********************************* PRINCIPAL CODE ********************************/
+/*********************************************************************************/
 
 anime.timeline({ loop: false })
     .add({

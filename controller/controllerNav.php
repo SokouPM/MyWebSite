@@ -2,7 +2,7 @@
 
 switch (key($_GET)) {   // If in the url there is :
     case 'accueil':
-        require_once('view/home.phtml');       // Go to page "view/whoami.php"
+        require_once('view/home.phtml');       // Go to page "view/home.php"
         break;
 
     case 'presentation':

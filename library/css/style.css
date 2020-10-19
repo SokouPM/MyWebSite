@@ -121,6 +121,12 @@ main .link:hover {
     }
 }
 
+/****** career page ******/
+
+.bigtext {
+    font-weight: normal;
+}
+
 /****** Works pages ******/
 
 .production {
@@ -144,10 +150,6 @@ main .link:hover {
 
 .workTitle {
     margin-top: 10px;
-}
-
-.bigtext {
-    font-weight: bold;
 }
 
 .smaller {
