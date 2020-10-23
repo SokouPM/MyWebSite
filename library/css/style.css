@@ -168,6 +168,21 @@ main .link:hover {
     }
 }
 
+/****** contact page ******/
+
+main form .formLink {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+main form .formLink:hover {
+    transform: scale(1.15);
+}
+
 /************************ footer ***********************/
 
 .footer {

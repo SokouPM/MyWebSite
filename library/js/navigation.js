@@ -27,6 +27,7 @@ function linkActive(url) {      // To change nav link selected
             link[1].classList.remove("active");
             link[2].classList.remove("active");
             link[3].classList.remove("active");
+            link[4].classList.remove("active");
             break;
 
         case 'parcours':
@@ -34,6 +35,7 @@ function linkActive(url) {      // To change nav link selected
             link[1].classList.add("active");
             link[2].classList.remove("active");
             link[3].classList.remove("active");
+            link[4].classList.remove("active");
             break;
 
         case 'infographies':
@@ -41,6 +43,7 @@ function linkActive(url) {      // To change nav link selected
             link[1].classList.remove("active");
             link[2].classList.add("active");
             link[3].classList.remove("active");
+            link[4].classList.remove("active");
             break;
 
         case 'web':
@@ -48,6 +51,15 @@ function linkActive(url) {      // To change nav link selected
             link[1].classList.remove("active");
             link[2].classList.remove("active");
             link[3].classList.add("active");
+            link[4].classList.remove("active");
+            break;
+
+        case 'contact':
+            link[0].classList.remove("active");
+            link[1].classList.remove("active");
+            link[2].classList.remove("active");
+            link[3].classList.remove("active");
+            link[4].classList.add("active");
             break;
 
         default:
