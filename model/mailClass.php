@@ -43,34 +43,30 @@ class Mail
 
     public function sendMail($lastname, $firstname, $emailAdress, $object, $message)
     {
-            $header = "MIME-Version: 1.0\r\n";
-            $header .= 'From:"PrimFX.com"<support@primfx.com>' . "\n";
-            $header .= 'Content-Type:text/html; charset="uft-8"' . "\n";
-            $header .= 'Content-Transfer-Encoding: 8bit';
 
-            $mail = [
-                "LastName"  => filter_var(ucfirst(strtolower($lastname)), FILTER_SANITIZE_FULL_SPECIAL_CHARS),
-                "FirstName" => filter_var(ucfirst(strtolower($firstname)), FILTER_SANITIZE_FULL_SPECIAL_CHARS),     // ucfirst : capitalize the first letter
-                "Adress"    => filter_var(strtolower($emailAdress), FILTER_SANITIZE_FULL_SPECIAL_CHARS),            // strtolower : lowercase all letters
-                "Object"    => filter_var(ucfirst(strtolower($object)), FILTER_SANITIZE_FULL_SPECIAL_CHARS),        // filter_var : remove html tags
-                "Message"   => filter_var($message, FILTER_SANITIZE_FULL_SPECIAL_CHARS),
-            ];
+        $mail = [
+            "LastName"  => htmlspecialchars(ucfirst(strtolower($lastname)), ENT_QUOTES, 'UTF-8'),
+            "FirstName" => htmlspecialchars(ucfirst(strtolower($firstname)), ENT_QUOTES, 'UTF-8'),      // ucfirst : capitalize the first letter
+            "Adress"    => htmlspecialchars(strtolower($emailAdress), ENT_QUOTES, 'UTF-8'),             // strtolower : lowercase all letters
+            "Object"    => htmlspecialchars($object, ENT_NOQUOTES),                                     // htmlspecialchars : remove html tags
+            "Message"   => htmlspecialchars($message, ENT_NOQUOTES),
+        ];
 
-            $mailText = '
-                    <div align="center">
-                        <u>Nom de l\'expéditeur :</u> ' . $mail["FirstName"] . " " . $mail["LastName"] . '<br />
-                        <u>Courriel de l\'expéditeur :</u> ' . $mail["Adress"] . '<br />
-                    </div>
+        $header = "MIME-Version: 1.0\r\n";
+        $header .= 'From:"' . utf8_decode(utf8_encode($mail["FirstName"])) . ' ' . utf8_decode(utf8_encode($mail["LastName"])) . '"<' . $mail["Adress"] . '>' . "\n";
+        $header .= 'Content-Type:text/html; charset="uft-8"' . "\n";
+        $header .= 'Content-Transfer-Encoding: 8bit';
+
+        $mailText = '
                     <div align="left">
-                        <br />
                         ' . nl2br($mail["Message"]) . '
                         <br />
                     </div>
+                    <div align="center">
+                        <u>Envoyé depuis https://www.pierre-marquet.fr</u>
+                    </div>
             ';  // nl2br : take line breaks into account
 
-            //mail("marquet_pierre@yahoo.fr", "CONTACT - pierre-marquet.fr", $message, $header);
-
-            return $mailText;
-
+        mail("marquet_pierre@yahoo.fr", utf8_decode(utf8_encode($mail["Object"])), $mailText, $header);
     }
 }

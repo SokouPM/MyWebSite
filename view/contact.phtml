@@ -3,7 +3,7 @@
 
 <head>
     <?php include_once('view/include/head.html'); ?>
-    <title>Productions web - Pierre Marquet</title>
+    <title>Contact - Pierre Marquet</title>
 </head>
 
 <body>
@@ -15,29 +15,42 @@
         <form action="index.php?contactPost" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="lastName">Nom</label>
-                    <input type="text" class="form-control" name="lastName" pattern="^[A-Za-z]{2,50}" placeholder="Marquet" required>
+                    <label for="lastName">Nom :</label>
+                    <input type="text" class="form-control" name="lastName" pattern="^[A-Za-zÀ-ÿ]{2,50}" placeholder="Votre nom" <? if (isset($_SESSION["lastName"])) : echo "value=\"" . $_SESSION["lastName"] . "\""; endif; ?> required="required">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="firstName">Prénom</label>
-                    <input type="text" class="form-control" name="firstName" pattern="^[A-Za-z]{2,30}" placeholder="Pierre" required>
+                    <label for="firstName">Prénom :</label>
+                    <input type="text" class="form-control" name="firstName" pattern="^[A-Za-zÀ-ÿ]{2,50}" placeholder="Votre prénom" <? if (isset($_SESSION["firstName"])) : echo "value=\"" . $_SESSION["firstName"] . "\""; endif; ?> required="required">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="email">Courriel</label>
-                    <input type="email" class="form-control" name="email" pattern="[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}" placeholder="example@gmail.com" required>
+                    <label for="email">Courriel :</label>
+                    <input type="email" class="form-control" name="email" pattern="[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}" placeholder="example@mail.com" <? if (isset($_SESSION["email"])) : echo "value=\"" . $_SESSION["email"] . "\""; endif; ?> required="required">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="object">Objet</label>
-                    <input type="text" class="form-control" name="object" placeholder="L'objet de votre message" required>
+                    <label for="object">Objet :</label>
+                    <input type="text" class="form-control" name="object" placeholder="L'objet de votre message" <? if (isset($_SESSION["object"])) : echo "value=\"" . $_SESSION["object"] . "\""; endif; ?> required="required">
                 </div>
             </div>
             <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" name="message" placeholder="Votre message..." rows="10" required></textarea>
+                <label for="message">Message :</label>
+                <textarea class="form-control" name="message" placeholder="Votre message..." rows="10" required="required"><? if (isset($_SESSION["message"])) : echo ($_SESSION["message"]); endif; ?></textarea>
             </div>
             <div class="text-center">
+
+                <? if (isset($_SESSION["mailReturn"]) && isset($_SESSION["mailConfirm"])) : ?>
+                    <p class="font-weight-bold <? if ($_SESSION["mailConfirm"] == true) : echo "text-success"; else : echo "text-danger"; endif; ?>"><? echo ($_SESSION["mailReturn"]) ?></p>
+
+                    <? $_SESSION["mailReturn"]   = null; ?>
+                    <? $_SESSION["mailConfirm"]  = null; ?>
+                    <? $_SESSION["lastName"]     = null; ?>
+                    <? $_SESSION["firstName"]    = null; ?>
+                    <? $_SESSION["email"]        = null; ?>
+                    <? $_SESSION["object"]       = null; ?>
+                    <? $_SESSION["message"]      = null; ?>
+                <? endif; ?>
+
                 <button type="submit" class="btn btn-primary btn-lg formLink">Envoyer</button>
                 <button type="reset" class="btn btn-danger btn-lg formLink">Effacer</button>
             </div>
