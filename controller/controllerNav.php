@@ -1,9 +1,9 @@
 <?php
 
-class controllerNav
+class ControllerNav
 {
 
-    public static function runNavigation()
+    public static function runNavigation(): void
     {
 
         switch (key($_GET)) {   // If in the url there is :
@@ -61,6 +61,19 @@ class controllerNav
             default:
                 header('location: index.php');     // Go to page "view/whoami.php"
                 break;
+        }
+    }
+
+    public static function activateSnow(): void
+    {
+        $today = new DateTime();
+        $startDate = new DateTime(date('y') . '-03-01');
+        $endDate = new DateTime(date('y') . '-11-01');
+
+        if ($startDate <= $today && $today <= $endDate) {
+            $_SESSION["snow"] = false;
+        } else {
+            $_SESSION["snow"] = true;
         }
     }
 }

@@ -3,6 +3,9 @@
 
 <head>
     <?php include_once('view/include/head.html'); ?>
+    <?php if ($_SESSION["snow"] === true) : ?>
+        <script type="text/javascript" src="./library/js/snow.js"></script>
+    <?php endif ?>
     <title>Contact - Pierre Marquet</title>
 </head>
 
