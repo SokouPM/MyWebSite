@@ -67,13 +67,13 @@ class ControllerNav
     public static function activateSnow(): void
     {
         $today = new DateTime();
-        $startDate = new DateTime(date('y') . '-03-01');
-        $endDate = new DateTime(date('y') . '-11-01');
+        $endDate = new DateTime(date('y') . '-03-01');
+        $startDate = new DateTime(date('y') . '-11-01');
 
         if ($startDate <= $today && $today <= $endDate) {
-            $_SESSION["snow"] = false;
-        } else {
             $_SESSION["snow"] = true;
+        } else {
+            $_SESSION["snow"] = false;
         }
     }
 }
