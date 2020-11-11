@@ -4,7 +4,7 @@
 <head>
     <?php include_once('view/include/head.html'); ?>
     <?php if ($_SESSION["snow"] === true) : ?>
-        <script type="text/javascript" src="./library/js/snow.js"></script>
+        <script src="./library/js/snow.js"></script>
     <?php endif ?>
     <title>Contact - Pierre Marquet</title>
 </head>
@@ -19,26 +19,26 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="lastName">Nom :</label>
-                    <input type="text" class="form-control" name="lastName" pattern="^[A-Za-zÀ-ÿ]{2,50}" placeholder="Votre nom" <?php if (isset($_SESSION["lastName"])) : echo "value=\"" . $_SESSION["lastName"] . "\""; endif; ?> required="required">
+                    <input type="text" class="form-control" id="lastName" name="lastName" pattern="^[A-Za-zÀ-ÿ]{2,50}" placeholder="Votre nom" <?php if (isset($_SESSION["lastName"])) : echo "value=\"" . $_SESSION["lastName"] . "\""; endif; ?> required="required">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="firstName">Prénom :</label>
-                    <input type="text" class="form-control" name="firstName" pattern="^[A-Za-zÀ-ÿ]{2,50}" placeholder="Votre prénom" <?php if (isset($_SESSION["firstName"])) : echo "value=\"" . $_SESSION["firstName"] . "\""; endif; ?> required="required">
+                    <input type="text" class="form-control" id="firstName" name="firstName" pattern="^[A-Za-zÀ-ÿ]{2,50}" placeholder="Votre prénom" <?php if (isset($_SESSION["firstName"])) : echo "value=\"" . $_SESSION["firstName"] . "\""; endif; ?> required="required">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="email">Courriel :</label>
-                    <input type="email" class="form-control" name="email" pattern="[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}" placeholder="example@mail.com" <?php if (isset($_SESSION["email"])) : echo "value=\"" . $_SESSION["email"] . "\""; endif; ?> required="required">
+                    <input type="email" class="form-control" id="email" name="email" pattern="[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}" placeholder="example@mail.com" <?php if (isset($_SESSION["email"])) : echo "value=\"" . $_SESSION["email"] . "\""; endif; ?> required="required">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="object">Objet :</label>
-                    <input type="text" class="form-control" name="object" placeholder="L'objet de votre message" <?php if (isset($_SESSION["object"])) : echo "value=\"" . $_SESSION["object"] . "\""; endif; ?> required="required">
+                    <input type="text" class="form-control" id="object" name="object" placeholder="L'objet de votre message" <?php if (isset($_SESSION["object"])) : echo "value=\"" . $_SESSION["object"] . "\""; endif; ?> required="required">
                 </div>
             </div>
             <div class="form-group">
                 <label for="message">Message :</label>
-                <textarea class="form-control" name="message" placeholder="Votre message..." rows="10" required="required"><?php if (isset($_SESSION["message"])) : echo ($_SESSION["message"]); endif; ?></textarea>
+                <textarea class="form-control" id="message" name="message" placeholder="Votre message..." rows="10" required="required"><?php if (isset($_SESSION["message"])) : echo ($_SESSION["message"]); endif; ?></textarea>
             </div>
             <div class="text-center">
 
