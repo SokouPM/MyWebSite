@@ -91,8 +91,15 @@ svg {
     font-size: 20px;
 }
 
-#myAge {
-    font-size: 20px;
+#techs {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#techs h5 {
+    font-weight: bold;
+    font-size: 25px;
 }
 
 main .link {
@@ -118,6 +125,13 @@ main .link:hover {
 @media screen and (max-width: 992px) {
     #job {
         font-size: 18px;
+    }
+    #techs div {
+        margin: 20px;
+    }
+    #techs h5 {
+        font-weight: bold;
+        font-size: 20px;
     }
 }
 
