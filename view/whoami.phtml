@@ -4,7 +4,7 @@
 <head>
     <?php include_once('view/include/head.html'); ?>
     <?php if ($_SESSION["snow"] === true) : ?>
-        <script src="./library/js/snow.js"></script>
+    <script src="./library/js/snow.js"></script>
     <?php endif ?>
     <title>Développeur Web, Infographiste sur Paris - Pierre Marquet</title>
 </head>
@@ -16,7 +16,8 @@
     <main class="container">
         <!-- profile and logo -->
         <div class="profile">
-            <img class="rounded-circle" id="profilePicture" src="./sources/files/profile.jpg" alt="Pierre Marquet" width="200" height="200">
+            <img class="rounded-circle" id="profilePicture" src="./sources/files/profile.jpg" alt="Pierre Marquet"
+                width="200" height="200">
             <div class="ml-5 mr-5">
                 <h2 id="name">Pierre Marquet</h2>
                 <h1 id="job">Infographiste / Développeur Web</h1>
@@ -27,8 +28,12 @@
 
         <!-- description -->
         <div class="mt-3">
-            <p id="presentation" class="text-justify text-dark">
-                Issu du monde de l'<strong>infographie</strong>, j'ai travaillé pendant 5 ans pour la <strong>Gendarmerie Nationale</strong> afin de mettre en forme des parcours d'enseignements à travers l'<strong>image</strong> et l'<strong>animation</strong>. je me suis ensuite formé au métier de <strong>développeur web</strong> pour travailler dans un domaine qui me passionne et devenir plus polyvalent.
+            <p class="text-justify text-dark">
+                Issu du monde de l'<strong>infographie</strong>, j'ai travaillé pendant 5 ans pour la <strong>Gendarmerie Nationale</strong> afin de met tre en forme des parcours d'enseignements grâce
+                à de l'<strong>image</strong> et l'<strong>animation</strong>, avant d’effectuer une formation de <strong>développeur web et web mobile</strong> dans le but de devenir plus polyvalent.
+            </p>
+            <p class="text-justify text-dark">
+                Actuellement je suis à recherche d'un stage en alternance de <strong>Concepteur Développeur d'applications</strong> pour continuer dans ce domaine qui me passionne.
             </p>
         </div>
 
@@ -39,7 +44,8 @@
                 <p><img src="./sources/files/tech_icons/illustrator.png" alt="logo Illustrator"> Adobe Illustrator</p>
                 <p><img src="./sources/files/tech_icons/photoshop.png" alt="logo Photoshop"> Adobe Photoshop</p>
                 <p><img src="./sources/files/tech_icons/indesign.png" alt="logo indesign"> Adobe Indesign</p>
-                <p><img src="./sources/files/tech_icons/vscode.png" alt="logo Visual Studio Code"> Visual Studio Code</p>
+                <p><img src="./sources/files/tech_icons/vscode.png" alt="logo Visual Studio Code"> Visual Studio Code
+                </p>
                 <p><img src="./sources/files/tech_icons/jmerise.png" alt="logo Jmerise"> Jmerise</p>
                 <p><img src="./sources/files/tech_icons/bouml.png" alt="logo BoUML"> BoUML</p>
             </div>
@@ -51,7 +57,7 @@
                 <p><img src="./sources/files/tech_icons/php.png" alt="logo php"> PHP</p>
             </div>
             <div>
-                <h5>Framework</h5>
+                <h5>Frameworks / Libraries</h5>
                 <p><img src="./sources/files/tech_icons/symfony.png" alt="logo symfony"> Symfony</p>
                 <p><img src="./sources/files/tech_icons/jquery.png" alt="logo jquery"> jQuery</p>
                 <p><img src="./sources/files/tech_icons/bootstrap.png" alt="logo bootstrap"> Bootstrap</p>
@@ -72,10 +78,15 @@
 
         <!-- links -->
         <div class="d-flex flex-wrap justify-content-center">
-            <a href="https://www.linkedin.com/in/pierre-marquet-98987b199/" onclick="window.open(this.href); return false;" class="link btn btn-primary btn-lg"><i class="fab fa-linkedin-in"></i> | Voir mon linkedin</a>
-            <a href="https://github.com/SokouPM" onclick="window.open(this.href); return false;" class="link btn btn-secondary btn-lg "><i class="fab fa-github"></i> | Voir mon github</a>
-            <a href="index.php?contact" class="link btn btn-danger btn-lg"><i class="fa fa-envelope"></i> | Contactez-moi</a>
-            <a href="./sources/files/CV_PierreMarquet.pdf" onclick="window.open(this.href); return false;" class="link btn btn-success btn-lg"><i class="fas fa-file-pdf"></i> | Téléchargez mon CV</a>
+            <a href="https://www.linkedin.com/in/pierre-marquet-98987b199/"
+                onclick="window.open(this.href); return false;" class="link btn btn-primary btn-lg"><i
+                    class="fab fa-linkedin-in"></i> | Voir mon linkedin</a>
+            <a href="https://github.com/SokouPM" onclick="window.open(this.href); return false;"
+                class="link btn btn-secondary btn-lg "><i class="fab fa-github"></i> | Voir mon github</a>
+            <a href="index.php?contact" class="link btn btn-danger btn-lg"><i class="fa fa-envelope"></i> |
+                Contactez-moi</a>
+            <a href="./sources/files/CV_PierreMarquet.pdf" onclick="window.open(this.href); return false;"
+                class="link btn btn-success btn-lg"><i class="fas fa-file-pdf"></i> | Téléchargez mon CV</a>
         </div>
 
         <!-- carousel -->

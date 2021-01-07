@@ -42,7 +42,7 @@ class ControllerNav
                     $_SESSION["mailReturn"] = "Votre message a bien été envoyé !";
                     $_SESSION["mailConfirm"] = true;
 
-                    header('location: index.php?contact');     // Go to page "view/whoami.php"
+                    header('location: index.php?contact');     // Go to page "view/contact.php"
                 } else {
 
                     $_SESSION["lastName"]   = $_POST["lastName"];
@@ -54,12 +54,11 @@ class ControllerNav
                     $_SESSION["mailReturn"]     = "Erreur lors de l'envoi de votre message, contactez-moi sur marquet_pierre@yahoo.fr.";
                     $_SESSION["mailConfirm"]    = false;
 
-                    header('location: index.php?contact');     // Go to page "view/whoami.php"
+                    header('location: index.php?contact');     // Go to page "view/contact.php"
                 }
                 break;
 
             default:
-                header('location: index.php');     // Go to page "view/whoami.php"
                 break;
         }
     }

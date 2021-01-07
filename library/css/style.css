@@ -94,12 +94,13 @@ svg {
 #techs {
     display: flex;
     justify-content: space-around;
+    text-align: center;
     flex-wrap: wrap;
 }
 
 #techs h5 {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 main .link {
